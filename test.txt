@@ -1,0 +1,3 @@
+miguel,20,igarassu
+gabriel,22,pernambuco
+miguel,22,igarassu
