@@ -247,6 +247,12 @@ text-decoration:none;
 }
 
 
+select{
+width: 320px;
+height: 40px;
+}
+    
+    
 </style>
 </head>
 
