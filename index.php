@@ -246,6 +246,11 @@ font-size:10px;
 text-decoration:none;
 }
 
+select{
+width:320px;
+height:40px;
+
+}
 
 </style>
 </head>
@@ -268,8 +273,8 @@ text-decoration:none;
   <?php
 
             $amg = file('parentesco.csv');
-            foreach($amg as $parentes){
-            $amg[] = explode(',', $parentes);
+            foreach($amg as $id => $parentes){
+            $amg[$id] = explode(',', $parentes);
             }
 
        ?>
