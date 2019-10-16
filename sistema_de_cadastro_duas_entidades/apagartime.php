@@ -1,6 +1,6 @@
 <?php
 $tabela = $_GET['id'];//pega os  dados via get(URL)
-$arquivo = file('times.csv');//lê todo o arquivo
+$arquivo = file('tabela.csv');//lê todo o arquivo
 
 unset($arquivo[$tabela]);//apaga uma linha da tabela;
 
@@ -11,8 +11,8 @@ $dado = $dado . $key;
 
 }
 
-$abri = fopen('times.csv',"w");
+$abri = fopen('tabela.csv',"w");
 fwrite($abri,$dado);
 
-header("location:TimesCadastrados.php");
+header("location:jogadores.php");
 ?>

@@ -4,5 +4,5 @@
 
     $handle = fopen('jogadores.csv', 'a');
     fwrite($handle, $dado); 
-    header("location:jogadoresCadastrados.php");
+    header("location:jogadores.php");
 ?>
