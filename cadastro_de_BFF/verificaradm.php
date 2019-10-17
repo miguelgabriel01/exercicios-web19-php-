@@ -3,6 +3,7 @@ session_start();
 
 $senha = $_POST['senha'] ?? '' ;
 $email = $_POST['email'] ?? '' ;
+//O$cpf = $_POST['cpf'] ?? '';
 
 
  
@@ -11,16 +12,23 @@ $email = $_POST['email'] ?? '' ;
  $dados[$i] = explode(",",TRIM($dados[$i]));
 	if ($senha ==  $dados[$i][1] && $email ==  $dados[$i][0]){
 		    $_SESSION['autorizado'] = true;
-		    $_SESSION['cpf'] = $dados[$i][1];
+		    //$_SESSION['cpf'] = $dados[$i][2];
 		   // salva na sessão o CPF do indivíduo
 break;
 	}
 
 
  }
- header('location: cadastroAtributos.php');
+ header('location:cadastroAtributos.php');
  
  ?>
+
+
+
+
+
+
+
 
 
 /*

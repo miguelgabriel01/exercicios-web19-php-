@@ -246,13 +246,12 @@ font-size:10px;
 text-decoration:none;
 }
 
-
 select{
-width: 320px;
-height: 40px;
+width:320px;
+height:40px;
+
 }
-    
-    
+
 </style>
 </head>
 
@@ -271,8 +270,15 @@ height: 40px;
 </header>
 
 
+  <?php
 
-   
+            $amg = file('parentesco.csv');
+            foreach($amg as $id => $parentes){
+            $amg[$id] = explode(',', $parentes);
+            }
+
+       ?>
+
 
 
 <section class="form">
@@ -298,6 +304,15 @@ height: 40px;
               <input type="number" name="numero"  required=" " >
               <label>Numero</label>
           </div>    
+
+
+ <select name="time">
+         <?php foreach ($amg as $parentes): ?>
+              <?php list($t) = $parentes; ?>
+                <option value="<?= $t ?>"><?= $t?></option>
+            <?php endforeach ?>
+       </select>
+       <label>time</label>
 
 
           <div class="meio">
@@ -334,6 +349,9 @@ height: 40px;
  <th>Cidade</th>
  <th>Numero</th>
  <th>Email</th>
+ <th>Id</th>
+ <th>Parentesco</th>
+
  </tr>
  
  
